@@ -28,7 +28,7 @@ int[] PairProductArray (int[] arr)
     return pairArray;
 }
 
-int[] myArray = CreateArray(5, 1,10);
+int[] myArray = CreateArray(9, 1,10);
 int[] myPairProdArray = PairProductArray(myArray);
 
 Console.Write("Дан массив: ");

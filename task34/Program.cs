@@ -29,4 +29,4 @@ int[] myArray = CreateArray(10, 100, 1000);
 PrintArray(myArray);
 
 Console.WriteLine();
-Console.WriteLine($"Количество нечетных чисел в массиве: {CountEvenNums(myArray)}.");
+Console.WriteLine($"Количество чётных чисел в массиве: {CountEvenNums(myArray)}.");

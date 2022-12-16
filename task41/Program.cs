@@ -2,31 +2,33 @@
 // 0, 7, 8, -2, -2 -> 2
 // 1, -7, 567, 89, 223-> 3
 
-int PositiveCount(string text)
+int[] CreateArray(int size)
+{
+    int[] addArray = new int[size];
+    int number = 0;
+    for (int i = 0; i < size; i++)
+    {
+        Console.Write($"Введите число {i + 1} из {size}: ");
+        number = int.Parse(Console.ReadLine()!);
+        addArray[i] = number;
+    }
+    return addArray;
+}
+
+int PositiveCount(int[] array)
 {
     int count = 0;
-    for (int i = 0; i < text.Length; i++)
+    for (int i = 0; i < array.Length; i++)
     {
-        string res = string.Empty;
-        while (text[i] != ',')
-        {
-            if (i == text.Length - 1)
-            {
-                res += text[i];
-                break;
-            }
-            else
-            {
-                res += text[i];
-                i++;
-            }
-        }
-        if (Convert.ToInt32(res) > 0) count++;
+        if (array[i] > 0) count++;
     }
     return count;
 }
 
-Console.Write("Введите числа через запятую: ");
-string numbers = Console.ReadLine()!;
+Console.Write("Напишите, сколько чисел вы хотите ввести: ");
+int m = int.Parse(Console.ReadLine()!);
 
-Console.WriteLine($"Общее количество чисел больше нуля: {PositiveCount(numbers)}.");
+int[] myArray = CreateArray(m);
+
+Console.WriteLine("Среди данных введенных чисел: " + string.Join(", ", myArray));
+Console.WriteLine("Общее количество чисел больше нуля: " + PositiveCount(myArray));

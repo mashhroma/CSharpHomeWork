@@ -46,3 +46,4 @@ double[,] myArray = CreateDoubleArray(row, col, -1000, 1000);
 Console.WriteLine();
 
 PrintDoubleArray(myArray, 7);
+Console.WriteLine();

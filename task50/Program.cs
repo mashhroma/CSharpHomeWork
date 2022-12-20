@@ -43,6 +43,7 @@ void SearchPosValue(int[,] table, int rowNumber, int colNumber)
         Console.WriteLine($"В таблице нет элемента с данной позицией ([{rowNumber},{colNumber}], где {rowNumber} - строка и {colNumber} - столбец).");
     else
         Console.WriteLine($"В массиве элемент с позицией [{rowNumber},{colNumber}] имеет значение: {table[rowNumber - 1, colNumber - 1]}.");
+    // уменьшила на 1, чтобы пользователю было удобнее считать с 1, а не с 0
 }
 
 Console.WriteLine("Дан массив: ");

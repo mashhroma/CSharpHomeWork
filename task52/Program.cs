@@ -48,15 +48,19 @@ double[] ColumnAverageArray(int[,] array)
     return averageArray;
 }
 
+Console.WriteLine("Данная программа находит среднее арифметическое элементов в каждом столбце.");
+Console.WriteLine("Чтобы создать таблицу, заполненную рандомными числами, введите данные.");
+
 Console.Write("Введите количество строк: ");
 int row = int.Parse(Console.ReadLine()!);
 
 Console.Write("Введите количество столбцов: ");
 int col = int.Parse(Console.ReadLine()!);
 
-Console.WriteLine("Дан массив: ");
+Console.WriteLine("Созданный массив: ");
 int[,] myArray = CreateArray(row, col, 0, 100);
 PrintArray(myArray, 4);
 
 Console.WriteLine();
 Console.WriteLine($"Среднее арифметическое каждого столбца: {string.Join(" ; ", ColumnAverageArray(myArray))}.");
+Console.WriteLine();

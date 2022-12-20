@@ -40,7 +40,7 @@ void SearchPosValue(int[,] table, int rowNumber, int colNumber)
     || rowNumber - 1 >= table.GetLength(1)
     || colNumber - 1 >= table.GetLength(0)
     || colNumber - 1 >= table.GetLength(1))
-        Console.WriteLine($"В массиве нет ячейки с адресом ([{rowNumber},{colNumber}], где {rowNumber} - строка и {colNumber} - столбец).");
+        Console.WriteLine($"В таблице нет элемента с данной позицией ([{rowNumber},{colNumber}], где {rowNumber} - строка и {colNumber} - столбец).");
     else
         Console.WriteLine($"В массиве элемент с позицией [{rowNumber},{colNumber}] имеет значение: {table[rowNumber - 1, colNumber - 1]}.");
 }
@@ -51,7 +51,7 @@ PrintArray(myArray, 4);
 
 Console.WriteLine();
 
-Console.WriteLine("Напишите позицию элемента в двумерном массиве, чтобы узнать его значение.");
+Console.WriteLine("Напишите позицию элемента в таблице, чтобы узнать его значение.");
 
 Console.Write("Номер строки: ");
 int row = int.Parse(Console.ReadLine()!);
@@ -59,5 +59,5 @@ int row = int.Parse(Console.ReadLine()!);
 Console.Write("Номер столбца: ");
 int col = int.Parse(Console.ReadLine()!);
 
-Console.WriteLine();
 SearchPosValue(myArray, row, col);
+Console.WriteLine();
